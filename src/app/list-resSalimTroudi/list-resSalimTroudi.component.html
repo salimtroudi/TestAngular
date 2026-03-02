@@ -1,0 +1,30 @@
+<div class="input-group">
+  <div class="input-group-prepend"> 
+  <span class="input-group-text">Recherche</span>
+  </div>
+  <input type="text" aria-label="First name"[(ngModel)]="search"   class="form-control">
+</div>
+
+<div class="row"> 
+<div *ngFor="let s of searchbytiltle()" class="card m-3" style="width: 18rem;">  
+<div class="card-body">
+  <h5 class="card-title">Card title : {{s.name}}</h5>
+  <p class="card-text"> Description :  {{s.address}}</p>
+  <p class="card-text"> Date :  {{s.created_at | date}}</p>
+  
+  
+
+<hr>
+<button class="btn btn-danger" (click)="deleteSuggestion(s.id)">
+        Supprimer
+        </button>
+
+
+      <button class="btn btn-info" [routerLink]="['/details', s.id]">
+  Détails
+</button>
+
+
+</div>
+</div>
+</div> 

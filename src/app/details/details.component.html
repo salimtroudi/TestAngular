@@ -1,0 +1,14 @@
+<div class="card m-5" *ngIf="residence">
+  <div class="card-body">
+    <h3>{{ residence.name }}</h3>
+    <p><strong>adresse :</strong> {{ residence.address }}</p>
+    <p><strong>Date :</strong> {{ residence.created_at | date }}</p>
+    <p><strong>Date update  :</strong> {{ residence.updated_at | date }}</p>
+        <p><strong>Image  :</strong> {{ residence.image }}</p>
+            <p><strong>Status  :</strong> {{ residence.status }}</p>
+
+    <button class="btn btn-secondary" routerLink="/list">
+      Retour
+    </button>
+  </div>
+</div>
